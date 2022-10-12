@@ -29,5 +29,5 @@ spec:
   system: system:payment-landing
   lifecycle: experimental
   dependsOn:
-    - "payment-service"
+    - "component:payment-service"
   
