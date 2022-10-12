@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: acme-landing-ui
+spec:
+  type: ClusterIP
+  ports:
+    - name: "acme-landing-ui"
+      port: 5000
+  selector:
+    app: acme-landing-ui
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: acme-landing-ui
+  annotations:
+    dev.okteto.com/generate-host: acme-landing-ui
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: acme-landing-ui
+                port:
+                  number: 5000
+            path: /
+            pathType: ImplementationSpecific

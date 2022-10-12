@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "acme-landing-ui"
+  description: "Acme Corp amazing landing page"
+  tags:
+  - c#
+  - razor
+  - aspnet
+  - dotnet
+  annotations:
+    github.com/project-slug: gianfragolo/acme-landing-ui
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: acme-landing-ui
+    backstage.io/kubernetes-namespace: lucamilan
+  links:
+    - url: https://github.com/gianfragolo/acme-landing-ui
+      title: Github Repo
+      icon: github
+    - url: https://acme-landing-ui-lucamilan.cloud.okteto.net
+      title: Homepage
+      icon: code
+    - url: https://cloud.okteto.com/#/spaces/lucamilan
+      title: Okteto Platform
+      icon: cloud      
+spec:
+  type: website
+  owner: group:customer-experience
+  system: system:payment-landing
+  lifecycle: experimental
+  

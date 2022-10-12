@@ -1,0 +1,13 @@
+site_name: "acme-landing-ui"
+site_description: "Acme Corp amazing landing page"
+repo_url: https://github.com/gianfragolo/acme-landing-ui
+edit_uri: edit/master/docs
+
+nav:
+  - "Home": "index.md"
+  - "Getting Started": "getting-started.md"
+  - "Code of Conduct": "CODE_OF_CONDUCT.md"
+  - "Readme": "readme.md"
+
+plugins:
+  - techdocs-core

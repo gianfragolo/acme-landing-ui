@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acme-landing-ui
+  labels:
+    backstage.io/kubernetes-id: acme-landing-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acme-landing-ui
+  template:
+    metadata:
+      labels:
+        app: acme-landing-ui
+        backstage.io/kubernetes-id: acme-landing-ui
+    spec:
+      containers:
+        - image: lucamilan/acme-landing-ui:latest
+          imagePullPolicy: Always
+          name: acme-landing-ui
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"
+            - name: ASPNETCORE_URLS
+              value: "http://+:5000"
+          resources:
+            limits:
+              cpu: 250m
+              memory: 128Mi
+            requests:
+              cpu: 250m
+              memory: 128Mi
