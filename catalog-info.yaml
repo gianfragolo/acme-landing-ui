@@ -28,4 +28,6 @@ spec:
   owner: group:customer-experience
   system: system:payment-landing
   lifecycle: experimental
+  dependsOn:
+    - "payment-service"
   
