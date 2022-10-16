@@ -30,4 +30,5 @@ spec:
   lifecycle: experimental
   dependsOn:
     - "component:payment-service"
+    - "resource:aws-cognito"
   
