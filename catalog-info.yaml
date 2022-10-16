@@ -28,8 +28,6 @@ spec:
   owner: group:customer-experience
   system: system:payment-landing
   lifecycle: experimental
-  consumesApi:
-    - "applepay-wrapper"
   dependsOn:
     - "component:payment-service"
     - "resource:aws-cognito"
