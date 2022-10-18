@@ -28,9 +28,7 @@ spec:
   owner: group:customer-experience
   system: system:payment-landing
   lifecycle: experimental
-  apiConsumedBy:
-    - "applepay-wrapper"
-    - "googlepay-wrapper"
   dependsOn:
     - "resource:aws-cognito"
+  consumesApis: ['component:payment-service']
   
